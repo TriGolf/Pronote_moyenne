@@ -5,7 +5,7 @@ import time
 
 app = Flask(__name__)
 
-utilisations = 10
+utilisations = 0
 
 @app.route('/', methods=['GET', 'POST'])
 def login():
