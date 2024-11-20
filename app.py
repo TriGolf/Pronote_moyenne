@@ -30,7 +30,7 @@ def login():
             print(e)
             return render_template('fail.html')
         
-        return render_template("login.html",message="Votre moyenne générale : "+client.current_period.overall_average)
+        return render_template("login.html",message="Votre moyenne générale : "+client.current_period.overall_average,utilisation=utilisations)
     return render_template('login.html',utilisations=str(utilisations))
 
 
