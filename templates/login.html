@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Connection à pronote</title>
+</head>
+<body>
+
+<h1>Connection à pronote pour avoir votre moyenne générale</h1>
+
+<form method="post">
+    <label for="nom">Identifiant ent :</label>
+    <input type="text" id="nom" name="nom" placeholder="Ex p.dupond3" size="40" required>
+    
+</br>
+    <label for="password">Mot de passe :</label>
+    <input type="password" id="password" name="password" required>
+
+    <button type="submit" id="submit">Envoyer</button>
+    <p>{{message}}</p>
+    <p style="visibility: hidden;color:red" id="message">Veuillez patienter...</p>
+</form>
+
+<p>Déjà  {{utilisations}} utilisations</p>
+
+<script>
+    let boutton = document.getElementById('submit');
+    let message = document.getElementById('message')
+    boutton.addEventListener('click',function(){message.style.visibility = 'visible';});
+</script>
+
+</body>
+</html>
